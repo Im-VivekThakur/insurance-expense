@@ -1,0 +1,10 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: MedicalModel
+    src: ./
+    engine: python3.9
+    primary: true
+    run: uvicorn main:app --host 0.0.0.0 --port 8080
+    public_routes:
+    - "*"
